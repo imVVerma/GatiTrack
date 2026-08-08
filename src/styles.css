@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --card: #ffffff;
+  --primary: #0f172a;
+  --success: #166534;
+  --muted: #64748b;
+  --line: #cbd5e1;
+  --accent: #2563eb;
+  --accent-task: #f59e0b;
+  --warning: #b45309;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", ui-monospace, "Cascadia Code",
+    "Segoe UI Mono", monospace;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--background);
+  color: var(--primary);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+code,
+kbd,
+pre,
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+::selection {
+  background: #dbeafe;
+}

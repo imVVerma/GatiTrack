@@ -1,0 +1,18 @@
+{
+  "name": "Gati",
+  "short_name": "Gati",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#09111f",
+  "theme_color": "#0f172a",
+  "description": "A local-first daily checklist tracker.",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
