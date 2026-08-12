@@ -290,10 +290,11 @@ class ImportPayload(BaseModel):
 
 
 app = FastAPI(title="Gati API")
+_wildcard = ALLOWED_ORIGINS == ["*"]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"] if ALLOWED_ORIGINS == ["*"] else ALLOWED_ORIGINS,
-    allow_credentials=True,
+    allow_origins=["*"] if _wildcard else ALLOWED_ORIGINS,
+    allow_credentials=not _wildcard,  # credentials=True is invalid with wildcard origin
     allow_methods=["*"],
     allow_headers=["*"],
 )
